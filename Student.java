@@ -8,8 +8,12 @@ public class Student {
 	       int year;
 	       
 	       
-	       public void printFullName(){
-	    	    //TODO implement 
+	       public void printFullName(String firstName, String lastName ){
+	    	   this.firstName = firstName.toUpperCase();
+	           this.lastName =  lastName.toUpperCase();
+	           this.registration = registration;
+	           this.grade = grade;
+	           this.year = year;
 	    		}
 
 	       public void isApproved(){
