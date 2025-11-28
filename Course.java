@@ -45,5 +45,12 @@ public class Course {
         return maxGrade;
     }
     
+    public void enroll(Student[] students) {
+        System.out.println("\nInscribiendo grupo de " + students.length + " estudiantes...");
+        for (Student s : students) {
+            enrolledStudents.add(s); 
+        }
+        System.out.println("Inscripción masiva completada.");
+    }
     
 }
