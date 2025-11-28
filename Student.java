@@ -26,21 +26,28 @@ public class Student {
 	       
 	       }// constructor 2
 	       
+	       public Student() {
+	    	   
+	       }
+	       
 	       
 	       public void printFullName(){
 	    	    //TODO implement 
-	    	   
-	    		}
+	    	   System.out.println( firstName + " " + lastName );
+	       }
+	    		
 
-	       public void isApproved(){
+	       public boolean isApproved(){
 	    	     //TODO implement: should return true if grade >= 60
-	    		 }
+	    	   return grade >= 60;
+	       }
 
-	    public int changeYearIfApproved(){
+	       public int changeYearIfApproved(){
 	    	     //TODO implement: the student should advance to the next year if he/she grade is >= 60
-	    	     // Make year = year + 1, and print "Congragulations" if the student has been approved
-	    	     return 0;
-	    }
-	       
-
-
+	    	   if (this.isApproved()) {
+	    	        this.year = this.year + 1; 
+	    	        System.out.println("¡Felicidades " + firstName + "! Has pasado al año " + this.year + ".");
+	    	        }
+	    	   return this.year;
+	    	   }
+}
