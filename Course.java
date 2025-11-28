@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.List;   
 
 public class Course {
-    String courseName;
-    String professorName;
+    String courseName;//atributo 
+    String professorName;//atributo 
     int year;
     List<Student> enrolledStudents; 
 
@@ -17,40 +17,33 @@ public class Course {
     
     public void enroll(Student student) {
         enrolledStudents.add(student);
-        System.out.println(student.firstName + " ha sido inscrito en el curso de " + courseName + ".");
+        System.out.println(student.firstName + " Udted a sido inscrito al curso " + courseName );
     }
 
     public void unEnroll(Student student) {
         boolean removed = enrolledStudents.remove(student);
         
         if (removed) {
-            System.out.println(student.firstName + " ha sido dado de baja.");
-        } else {
-            System.out.println("ERROR: " + student.firstName + " no se encuentra en este curso.");
-        }
-    }
+            System.out.println(student.firstName + " Usted a sido dado de baja");
+        } else {//if
+            System.out.println("ERROR: " + student.firstName + "no esta en el curso");
+        }//else remove
+    }//Enroll
 
     public int countStudents() {
         return enrolledStudents.size(); 
     }
-
-    public int bestGrade() {
-        int maxGrade = 0; 
-
-        for (Student s : enrolledStudents) {
-            if (s.grade > maxGrade) {
-                maxGrade = s.grade;
-            }
-        }
-        return maxGrade;
-    }
     
     public void enroll(Student[] students) {
-        System.out.println("\nInscribiendo grupo de " + students.length + " estudiantes...");
-        for (Student s : students) {
-            enrolledStudents.add(s); 
-        }
-        System.out.println("Inscripción masiva completada.");
+        System.out.println("\nInscribiendo grupo de " + students.length + "estudiantes");
+        for (Student n : students) {
+            enrolledStudents.add(n); 
+    }//enroll
+    
+        System.out.println("Salon saturado");
+    
     }
     
-}
+    
+   
+}// class course
